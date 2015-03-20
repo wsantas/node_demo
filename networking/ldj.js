@@ -9,7 +9,7 @@ const
     LDJClient = function(stream) {
         events.EventEmitter.call(this);
         let
-            self = this;
+            self = this,
             buffer = '';
         stream.on('data', function(data){
             buffer += data;
