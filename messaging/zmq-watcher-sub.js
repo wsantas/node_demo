@@ -13,7 +13,7 @@ subscriber.on("message", function(data){
     let
         message = JSON.parse(data),
         date = new Date(message.timestamp);
-    console.log("File '"+message.file+"' changed at "+date)
+    console.log("File '"+message.file+"' changed at "+date);
 
 });
 

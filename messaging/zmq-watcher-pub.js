@@ -14,12 +14,12 @@ fs.watch(filename, function(){
     publisher.send(JSON.stringify({
         type:'changed',
         file: filename,
-        timestamp: Date.noq()
+        timestamp: Date.now()
     }));
 
 });
 
 //listen on TCP port 5432
-publisher.bind('tcp://*.5432', function(err){
+publisher.bind('tcp://*:5432', function(err){
     console.log('Listening for zmq subscribers...')
 });
